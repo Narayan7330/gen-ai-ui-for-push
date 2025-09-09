@@ -1,5 +1,5 @@
 import React from 'react';
-import './Navbar.css'; // Don't forget to import the CSS file
+import './navbar.css'; // Don't forget to import the CSS file
 
 const Navbar = () => {
   return (
@@ -13,10 +13,12 @@ const Navbar = () => {
 
       {/* Middle Section: Navigation Links */}
       <div className="navbar-mid">
-        <a href="/contact" className="nav-link">
+        {/* Changed href to scroll to the #contact ID */}
+        <a href="#contact" className="nav-link">
           Contact
         </a>
-        <a href="/about" className="nav-link">
+        {/* Changed href to scroll to the #about ID */}
+        <a href="#about" className="nav-link">
           About
         </a>
       </div>
