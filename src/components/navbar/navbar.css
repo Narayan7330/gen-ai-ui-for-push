@@ -1,0 +1,143 @@
+/* --- Global Reset & Font --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  /* Set a base background to match the hero section */
+  background-color: #F8F9FA;
+}
+
+/* --- Main Navbar Container --- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 2.5rem; /* Slightly more vertical padding */
+  /* Make navbar transparent */
+  background-color: transparent;
+  /* Position it over the content */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  box-sizing: border-box; /* Ensures padding is included in the width */
+}
+
+/* Equal division for the three sections */
+.navbar-left,
+.navbar-mid,
+.navbar-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+/* --- Section Alignment --- */
+.navbar-left {
+  justify-content: flex-start;
+}
+.navbar-mid {
+  justify-content: center;
+  gap: 3rem; /* More space between links */
+}
+.navbar-right {
+  justify-content: flex-end;
+  gap: 1.5rem;
+}
+
+/* --- Logo Styling --- */
+.navbar-logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  /* Dark navy blue for the logo text */
+  color: #1D2B48;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.navbar-logo:hover {
+  color: #0052D4; /* Brightens on hover */
+}
+
+/* --- Navlink Styling with Enhanced Hover --- */
+.nav-link {
+  /* Muted, professional text color */
+  color: #5B6A82;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 5px 0;
+  position: relative;
+  transition: color 0.3s ease-in-out;
+}
+
+/* The animated underline effect */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  /* Vibrant teal to match your primary button */
+  background-color: #2DD4BF;
+  transition: width 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.nav-link:hover {
+  /* Darken text on hover for better focus */
+  color: #1D2B48;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+
+/* --- Button Styling with "Best" Hover Effects --- */
+.nav-button {
+  padding: 0.6rem 1.75rem;
+  border: 2px solid transparent;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  /* Smooth transition for all properties */
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Primary "Register" button */
+.register-btn {
+  background-color: #2DD4BF; /* Vibrant Teal */
+  color: #ffffff;
+}
+
+.register-btn:hover {
+  transform: translateY(-4px); /* "Lifts" the button */
+  box-shadow: 0 10px 20px -8px rgba(45, 212, 191, 0.6); /* Creates a soft glow */
+  background-color: #34D399; /* Slightly greener tint on hover */
+}
+
+/* Secondary "Login" button (Outline style) */
+.login-btn {
+  background-color: transparent;
+  /* Muted blue-grey border and text */
+  color: #A0AEC0;
+  border: 2px solid #E2E8F0;
+}
+
+.login-btn:hover {
+  /* Fills the button with a very light grey and uses a stronger color for text/border */
+  background-color: #F8F9FA;
+  border-color: #A0AEC0;
+  color: #5B6A82;
+  transform: scale(1.03); /* Slightly enlarges the button */
+}
+
+
